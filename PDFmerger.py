@@ -1,0 +1,11 @@
+#requires pypdf2
+from PyPDF2 import PdfWriter
+
+merger = PdfWriter()
+
+# for pdf in ["file1.pdf", "file2.pdf", "file3.pdf"]:   #example to show adding multiple files
+for pdf in ["1.pdf", "2.pdf"]:
+    merger.append(pdf)
+
+merger.write("merged-pdf.pdf")
+merger.close()
